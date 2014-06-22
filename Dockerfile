@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Paul Andrew Liljenberg
+MAINTAINER Paul Andrew Liljenberg "liljenberg.paul@gmail.com"
 
 ADD crackloop /bin/crackloop
 RUN chmod +x /bin/crackloop
