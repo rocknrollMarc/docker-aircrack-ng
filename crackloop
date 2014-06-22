@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CAP=$1
+SSID=$2
+
+for wl in $(ls *txt.bz2|sort -k 8); do
+        bzcat "$wl" | $(which aircrack-ng) "$CAP" -l $PWD/aircrackloop.log -b "$SSID" -w- && \
+                rm $wl
+done
