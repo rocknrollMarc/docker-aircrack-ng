@@ -21,7 +21,7 @@ RUN git clone git://git.code.sf.net/p/crunch-wordlist/code crunch && \
 
 RUN git clone https://github.com/aircrack-ng/aircrack-ng.git && \
 	cd aircrack-ng && \
-	make && \
+	make strip && \
 	make install
 
 VOLUME /data
