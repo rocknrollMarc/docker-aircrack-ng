@@ -10,7 +10,7 @@ RUN apt-get update && apt-get -y install \
     make \
     sudo \
     libssl-dev \
-    libnl-3-dev \
+    libnl-genl-3-dev \
     pkg-config \
     build-essential
 
