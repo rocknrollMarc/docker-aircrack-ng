@@ -6,6 +6,7 @@ SSID=$2
 command -v aircrack-ng > /dev/null 2>&1 || { echo "I require aircrack-ng but it's not installed.  Aborting." >&2; exit 1; }
 
 for wl in $(ls *txt.bz2|sort -k 8); do
-        bzcat "$wl" | aircrack-ng "$CAP" -l $PWD/aircrackloop.log -b "$SSID" -w- && \
+        echo "$wl" >> $PWD/usedwordlist.log
+        bzcat "$wl" | aircrack-ng "$CAP" -l $PWD/aircrack-results.log -b "$SSID" -w- && \
                 rm $wl
 done
