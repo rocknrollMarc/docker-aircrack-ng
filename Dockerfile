@@ -21,4 +21,4 @@ RUN git clone https://github.com/aircrack-ng/aircrack-ng.git && \
 VOLUME /data
 WORKDIR /data
 
-CMD ["/bin/crackloop"]
+ENTRYPOINT ["/bin/crackloop"]
