@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CAP=$1
-SSID=$2
+CAP=$2
+SSID=$3
 
 command -v aircrack-ng > /dev/null 2>&1 || { echo "I require aircrack-ng but it's not installed.  Aborting." >&2; exit 1; }
 
