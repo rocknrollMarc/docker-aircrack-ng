@@ -10,4 +10,5 @@ for wl in $(ls *txt.bz2|sort -k 8); do
         cat $PWD/wordlist-in-use.log
         bzcat "$wl" | aircrack-ng -q $PWD/"$CAP" -l $PWD/aircrack-results.log -b "$SSID" -w- && \
                 rm $wl
+        cat $PWD/aircrack-results.log || true
 done
