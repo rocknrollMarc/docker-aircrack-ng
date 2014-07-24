@@ -8,16 +8,10 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get -y install \
     git-core \
     make \
-    sudo \
     libssl-dev \
     libnl-genl-3-dev \
     pkg-config \
     build-essential
-
-RUN git clone git://git.code.sf.net/p/crunch-wordlist/code crunch && \
-	cd crunch && \
-	make && \
-	make install
 
 RUN git clone https://github.com/aircrack-ng/aircrack-ng.git && \
 	cd aircrack-ng && \
