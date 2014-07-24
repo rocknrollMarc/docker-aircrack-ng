@@ -8,6 +8,6 @@ command -v aircrack-ng > /dev/null 2>&1 || { echo "I require aircrack-ng but it'
 for wl in $(ls *txt.bz2|sort -k 8); do
         echo "$wl" >> $PWD/wordlist-in-use.log
         cat $PWD/wordlist-in-use.log
-        bzcat "$wl" | aircrack-ng -q "$CAP" -l $PWD/aircrack-results.log -b "$SSID" -w- && \
+        bzcat "$wl" | aircrack-ng -q $PWD/"$CAP" -l $PWD/aircrack-results.log -b "$SSID" -w- && \
                 rm $wl
 done
