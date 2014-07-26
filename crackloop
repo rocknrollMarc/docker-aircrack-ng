@@ -9,6 +9,7 @@ crackloop () {
 	for wl in $(ls *txt.bz2|sort -k 8); do
 	    echo "$wl" >> $PWD/wordlist-in-use.log
 	    echo "Using wordlist:" "$wl"
+        echo "Wordlists left:" "$(ls *txt.bz2|wc -l)"
 	    bzcat "$wl" | aircrack-ng -q $PWD/"$CAP" -l $PWD/aircrack-results.log -b "$SSID" -w- && \
 	    	rm $wl
 	done
