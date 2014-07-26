@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get -y install \
     git-core \
+    curl \
     make \
     libssl-dev \
     libnl-genl-3-dev \
