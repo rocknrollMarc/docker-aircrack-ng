@@ -7,7 +7,7 @@ WORDLIST_TRESHOLD=${WORDLIST_TRESHOLD:-"2"}
 command -v aircrack-ng > /dev/null 2>&1 || { echo "I require aircrack-ng but it's not installed.  Aborting." >&2; exit 1; }
 
 crackloop () {
-    for wl in $(ls *txt.bz2|sort -k 8); do
+    for wl in $(ls *txt.bz2); do
         WORDLIST_NUMBER="$(ls *txt.bz2|wc -l)"
         echo "$wl" >> $PWD/wordlist-in-use.log
         echo "Using wordlist:" "$wl"
